@@ -1,14 +1,14 @@
 
 // API Keys (in a real app, these should be environment variables)
 export const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY || 'sk-example-key-replace-with-your-own'; // Kept for backward compatibility
-export const GEMINI_API_KEY = 'AIzaSyAkufDKqoXYUuYwpmKxzxfaxzafeJ3z36p4Y0Wwr04'; // For Gemini API
+export const GEMINI_API_KEY = 'AIzaSyAkufDKqoXYUuYwpmKxzxfaxFAzafeJ3z3as6p4Y0Wwr04'; // For Gemini API
 // export const YOUTUBE_API_KEY = 'your-youtube-api-key-here'; // For YouTube Data API
 // export const RAPIDAPI_KEY = '88e9d73b57msh9982c179daafdb7efwfep1d1688jsn6d4186f6ca5a'; // For RapidAPI
 // export const RAPIDAPI_HOST = 'youtube-video-summarizer-gpt-ai.p.rapidapi.com'; // For RapidAPI
 
 // API URLs
 export const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions'; // Kept for backward compatibility
-export const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+export const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateConntent';
 // export const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3';
 // export const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY || 'sk-example-key-replace-with-your-own'; // Kept for backward compatibility
 // export const GEMINI_API_KEY = 'AIzaSyAkufDKqoXYUuYupmKxeJ3z36p4Y0Wwr04'; // For Gemini API
