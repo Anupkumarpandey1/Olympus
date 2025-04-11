@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217.9 91.2% 59.8%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    @apply w-full overflow-x-hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Input and button focus styles */
+  input:focus, 
+  button:focus,
+  textarea:focus,
+  select:focus {
+    @apply outline-none ring-2 ring-primary/20 ring-offset-2 ring-offset-background transition-all duration-200;
+  }
+
+  /* Glass card styles */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Premium button */
+  .premium-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white rounded-full 
+    shadow-lg hover:shadow-xl transition-all duration-300 
+    hover:scale-[1.02] active:scale-[0.98] px-4 py-2 sm:px-6 sm:py-3;
+  }
+
+  /* Primary button */
+  .primary-button {
+    @apply px-4 py-2 md:px-8 md:py-3 bg-primary text-white rounded-full
+    shadow-md hover:shadow-lg transition-all duration-300
+    hover:bg-primary/90 active:scale-[0.98];
+  }
+
+  /* Secondary button */
+  .secondary-button {
+    @apply px-4 py-2 md:px-6 md:py-3 bg-white text-gray-800 rounded-full
+    shadow-md hover:shadow-lg transition-all duration-300
+    hover:bg-gray-50 active:scale-[0.98] border border-gray-200;
+  }
+
+  /* Premium card */
+  .premium-card {
+    @apply bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl border border-gray-100 
+    transition-all duration-300 hover:shadow-2xl overflow-hidden;
+  }
+
+  /* Axion card */
+  .axion-card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100
+    transition-all duration-300 hover:shadow-xl overflow-hidden
+    p-6 sm:p-8;
+  }
+
+  /* Fade-in animation class */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Slide-up animation class */
+  .slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  /* Slide-in-right animation class */
+  .slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  /* Fade-in-scale animation class */
+  .fade-in-scale {
+    animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    from { transform: translateX(20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes fadeInScale {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+}
+
+/* Responsive adjustments */
+@layer utilities {
+  /* Responsive text classes */
+  .responsive-heading {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  .responsive-subheading {
+    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+  }
+  
+  .responsive-body {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  /* Responsive padding and margin */
+  .responsive-container {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 md:py-8 lg:py-12;
+  }
+  
+  .responsive-section {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  }
+
+  .responsive-spacing {
+    @apply my-4 sm:my-6 md:my-8 lg:my-12;
+  }
+}
+
+/* Axion-specific styles */
+.axion-gradient {
+  @apply bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600;
+}
+
+.axion-text-gradient {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+.axion-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.axion-section {
+  @apply py-16 sm:py-20 md:py-24;
+}
+
+.axion-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+}
+
+/* Navbar styles */
+.nav-link {
+  @apply text-gray-700 hover:text-primary transition-colors duration-200;
+}
+
+.nav-link.active {
+  @apply text-primary font-medium;
+}
+
+.mobile-nav {
+  @apply fixed inset-0 bg-white z-50 flex flex-col p-6;
+}
