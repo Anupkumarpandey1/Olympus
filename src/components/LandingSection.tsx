@@ -31,19 +31,24 @@ const LandingSection = ({ onGetStarted }: LandingSectionProps) => {
   // Testimonials data
   const testimonials = [
     {
-      text: "Axion AI completely transformed how I study. The quizzes are incredibly tailored to my learning style!",
-      author: "Sarah Johnson",
-      role: "Medical Student"
+      text: "Learnflow AI completely transformed how I study. The quizzes are incredibly tailored to my learning style!",
+      author: "Arpita Kukreja",
+      role: "Medical Student and Doctor by profession"
     },
     {
-      text: "I've tried many learning platforms, but nothing compares to the personalized experience that Axion AI provides.",
-      author: "Michael Chen",
+      text: "I've tried many learning platforms, but nothing compares to the personalized experience that Learnflow AI provides.",
+      author: "Rudramani Upadhyay",
       role: "Software Engineer"
     },
     {
       text: "The AI-powered chat feature feels like having a personal tutor available 24/7. Simply incredible.",
-      author: "Emma Rodriguez",
+      author: "Cheshta Sharma",
       role: "PhD Candidate"
+    },
+    {
+      text: "Axion AI completely transformed how I study. The quizzes are incredibly tailored to my learning style!",
+      author: "Anup Kumar Pandey",
+      role: "Berozgaar"
     }
   ];
 
@@ -114,8 +119,9 @@ const LandingSection = ({ onGetStarted }: LandingSectionProps) => {
                 <span className="font-medium">AI-Powered Learning Revolution</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Master Any Topic with <span className="axion-text-gradient">AI-Powered</span> Assessments
+              <h1 className="text-2xl md:text-2xl lg:text-6xl font-bold mb-6 leading-tight">
+               
+                Master Any Topic with <span className="axion-text-gradient">AI-Powered</span> Assessments and Learn any <span className="axion-text-gradient">concept</span> interactively and with fun.
               </h1>
               
               <p className="text-lg text-gray-600 mb-8 max-w-lg">
@@ -140,9 +146,10 @@ const LandingSection = ({ onGetStarted }: LandingSectionProps) => {
                   className="secondary-button flex items-center"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
+                  
                 >
-                  Barrack
-                  <Flag className="ml-2 h-4 w-4" />
+                  <span className="axion-text-gradient">Barrack</span>
+                  <Flag className="ml-2 h-4 w-4"   />
                 </motion.a>
               </div>
               
@@ -247,7 +254,7 @@ const LandingSection = ({ onGetStarted }: LandingSectionProps) => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
             
             <p className="text-lg text-gray-600">
-              Getting started with Axion AI is quick and easy. Follow these simple steps to begin your enhanced learning journey.
+              Getting started with Learnflow AI is quick and easy. Follow these simple steps to begin your enhanced learning journey.
             </p>
           </motion.div>
 
@@ -277,7 +284,7 @@ const LandingSection = ({ onGetStarted }: LandingSectionProps) => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
             
             <p className="text-lg text-gray-600">
-              Discover how Axion AI has transformed the learning experience for students worldwide.
+              Discover how Learnflow AI has transformed the learning experience for students worldwide.
             </p>
           </motion.div>
 

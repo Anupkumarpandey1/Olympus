@@ -600,7 +600,9 @@ const AssessmentGenerator = ({ onQuizGenerated }: QuizGeneratorProps) => {
               max="6"
               className="w-full p-3 border border-gray-200 rounded-xl focus:border-quiz-primary transition-all duration-200"
             />
+            
           </div>
+          
         </div>
 
         <motion.button
